@@ -12,7 +12,7 @@ SET LOVEFILE=%GAMENAME%.love
 FOR /F "tokens=1 delims=" %%A in ('git describe --dirty --tags') do SET GITDESCRIBE=%%A
 FOR /F "tokens=1 delims=" %%A in ('git rev-list --count HEAD') do SET GITNUMCOMMITS=%%A
 
-%ZIPEXE% a -y -afzip %ZIPFILE% utils sti *.png *.lua
+%ZIPEXE% a -y -afzip %ZIPFILE% utils sti *.ogg *.png *.lua
 move %ZIPFILE% %LOVEFILE%
 mkdir %PACKAGE_DIR%
 

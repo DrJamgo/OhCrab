@@ -14,6 +14,10 @@ if arg[#arg] == "-debug" then
 end
 love.window.setMode(1280,640)
 
+local music = love.audio.newSource('funny_track_with_ringtone_effects_c64_style.ogg', 'stream')
+music:setLooping(true)
+music:play()
+
 Game = {}
 Game.tiles = love.graphics.newImage('tiles.png')
 Game.tiles:setFilter('nearest','nearest')
