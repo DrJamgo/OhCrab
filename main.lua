@@ -53,6 +53,10 @@ end
 Game.initialize()
 
 function love.update(dt)
+  if Game.eggs <= 0 then
+    return
+  end
+  
   local fastforward = (Game.options.f and 10) or 1
   local dt = dt * ((Game.options.p and 0) or (fastforward))
   Game.time = Game.time + dt
@@ -140,6 +144,13 @@ function love.draw()
     love.graphics.rectangle('fill', 0,0, 1280,640)
     love.graphics.setColor(1,1,1,1)
     love.graphics.draw(Game.hud)
+  end
+  
+  if Game.eggs <= 0 then
+    love.graphics.setColor(0,0,0,0.5)
+    love.graphics.rectangle('fill', 0,0, 1280,640)
+    love.graphics.setColor(1,1,1,1)
+    love.graphics.printf('GAME OVER!\nThey got all your Eggs', 0, 320, 1280, 'center', 0, 1,1)
   end
   
   love.graphics.print('\ndrjamgo.itch.io', 0, 600,0,0.5,0.5)
