@@ -5,7 +5,7 @@ love.filesystem.setRequirePath("?.lua;?/init.lua;lua/?.lua;lua/?/init.lua")
 APPLICATIONNAME = 'JumpDefense'
 
 require 'middleclass'
-
+love.window.setTitle("Oh!Crab - #icantdraw Game Jam - June 2020")
 local font = love.graphics.newFont( 32, 'normal' )
 love.graphics.setFont(font)
 
@@ -17,7 +17,7 @@ love.window.setMode(1280,640)
 Game = {}
 Game.tiles = love.graphics.newImage('tiles.png')
 Game.tiles:setFilter('nearest','nearest')
-require 'Player'
+require 'player'
 require 'objects'
 Game.hud = love.graphics.newImage('hud.png')
 
@@ -138,8 +138,10 @@ function love.draw()
     love.graphics.draw(Game.hud)
   end
   
-  love.graphics.print('drjamgo.itch.io', 0, 600)
-  love.graphics.printf('"Oh!Crab" #icantdraw game jam', 0, 600, 1280, 'center')
+  love.graphics.print('\ndrjamgo.itch.io', 0, 600,0,0.5,0.5)
+  love.graphics.printf('Oh!Crab', 0, 600, 1280, 'center')
+  love.graphics.printf('Sources:\nhttps://github.com/DrJamgo/OhCrab', 0, 600, 1280*2, 'right', 0, 0.5, 0.5)
+  
 end
 
 function love.quit()
