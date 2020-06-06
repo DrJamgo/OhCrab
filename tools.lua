@@ -101,7 +101,8 @@ function Gun:update(dt)
     local pointerfixture
     Game.world:rayCast(x, y, x2,y2,
       function (fixture, x, y, xn, yn, f)
-        if f < fmin then
+        local c = {fixture:getCategory()}
+        if f < fmin and c[G.Coll] then
           self.min = {x=x, y=y, xn=xn, yn=yn}
           fmin = f
           pointerfixture = fixture
