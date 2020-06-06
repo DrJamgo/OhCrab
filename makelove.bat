@@ -22,4 +22,6 @@ copy /b %LOVE_PATH%\*.dll %PACKAGE_DIR%
 copy /b %LOVE_PATH%\license.txt %PACKAGE_DIR%
 copy /b res\icon.ico %PACKAGE_DIR%
 
+%ZIPEXE% a -y -afzip %GAMENAME%_%GITDESCRIBE%.zip Oh!Crab
+
 pause
