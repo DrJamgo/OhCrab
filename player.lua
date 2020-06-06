@@ -1,3 +1,6 @@
+--
+-- Copyright DrJamgo@hotmail.com 2020
+--
 
 require 'utils/vec'
 require 'tools'

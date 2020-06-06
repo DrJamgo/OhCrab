@@ -1,3 +1,7 @@
+--
+-- Copyright DrJamgo@hotmail.com 2020
+--
+
 G = {
   Coll=1,
   Sense=2,

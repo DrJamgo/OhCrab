@@ -1,3 +1,7 @@
+--
+-- Copyright DrJamgo@hotmail.com 2020
+--
+
 function love.mousepressed(x,y,button)
   if button == 1 and Game.player.tool then
     Game.player.tool:activate()
